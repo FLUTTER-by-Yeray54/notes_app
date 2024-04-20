@@ -1,40 +1,29 @@
 # Notes App
 
-An elegant Notes taking app for Android & iOS built in flutter that uses sqflite for storage.
+Una App de Notas minimalista que se puede usar tanto en android como ios. Se usa sqlite para el almacenamiento en local.
 
 
-## About
-Notes app is a flutter application used to store data locally using sqflite. I have performed simple CRUD operations on Notes using sqflite. It will be a good reference for one searching how to work with sqflite in flutter and saving data locally.
+## Sobre la aplicación
+
+Es una aplicación de notas hecha en flutter. Usa sqlite para el almecenamiento de las notas en local.
 
 
-## Demo
-
-
-
-https://github.com/SaadKhanJadoon/Notes-App/assets/61506756/9340def5-b639-478f-b6b6-a7e0edac98e4
-
-
-
-
-## Built with:
+## Hecha con:
 
 - GetX
 - sqflite
 - MVC Pattern
 
-## Features
+## Funcionalidades:
 
-- Create note
-- Update note
-- Delete note
-- Favorite note
-- Search notes
-- Delete all notes
-- Last update of note
-- Date time created of note
+- Crear, Eliminar y Editar Notas
+- Eliminar todas las notas de un solo toque
+- Buscar notas
+- Fecha de creación de la nota
+- Fecha de la ultima edición de la nota
+- Añadir a favoritos la nota
 
-
-## Dependencies
+## Dependencias usadas
 
 - get: ^4.3.8
 - sqflite: ^2.0.0+4
@@ -44,12 +33,4 @@ https://github.com/SaadKhanJadoon/Notes-App/assets/61506756/9340def5-b639-478f-b
 - share: ^2.0.4
 
 
-## Contributing
-
-Contributions are always welcome!
-
-&nbsp;1. Fork this Project.  
-&nbsp;2. Create your Feature Branch (git checkout -b feature/amazing-feature)  
-&nbsp;3. Commit your Changes (git commit -m 'Add some Amazing Feature')  
-&nbsp;4. Push to the Branch (git push origin feature/amazing-feature)  
-&nbsp;5. Open a Pull Request.
+## Hecho por Yeray-rd
