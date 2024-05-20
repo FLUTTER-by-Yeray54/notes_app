@@ -21,10 +21,23 @@ class EditNotePage extends StatelessWidget {
         iconTheme: const IconThemeData(
           color: Colors.black,
         ),
-        title: const Text(
-          "Edit Note",
-          style: TextStyle(
-            color: Colors.black,
+        title: TextField(
+          controller: controller.titleController,
+          style: const TextStyle(
+            fontSize: 27,
+            fontWeight: FontWeight.bold,
+          ),
+          cursorColor: Colors.black,
+          enableInteractiveSelection: true,
+          decoration: InputDecoration(
+            hintText: "Title",
+            hintStyle: TextStyle(
+              fontSize: 27,
+              fontWeight: FontWeight.bold,
+              color: Colors.grey[600],
+              letterSpacing: 1,
+            ),
+            border: InputBorder.none,
           ),
         ),
         systemOverlayStyle: SystemUiOverlayStyle.dark,
@@ -38,31 +51,13 @@ class EditNotePage extends StatelessWidget {
           ),
           child: Column(
             children: [
-              TextField(
-                controller: controller.titleController,
-                style: const TextStyle(
-                  fontSize: 27,
-                  fontWeight: FontWeight.bold,
-                ),
-                cursorColor: Colors.black,
-                enableInteractiveSelection: false,
-                decoration: InputDecoration(
-                  hintText: "Title",
-                  hintStyle: TextStyle(
-                    fontSize: 27,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.grey[600],
-                    letterSpacing: 1,
-                  ),
-                  border: InputBorder.none,
-                ),
-              ),
+
               TextField(
                 style: const TextStyle(
                   fontSize: 22,
                 ),
                 cursorColor: Colors.black,
-                enableInteractiveSelection: false,
+                enableInteractiveSelection: true,
                 controller: controller.contentController,
                 decoration: const InputDecoration(
                   hintText: "Content",
@@ -73,7 +68,7 @@ class EditNotePage extends StatelessWidget {
                 ),
                 keyboardType: TextInputType.multiline,
                 maxLines: null,
-                autofocus: true,
+                autofocus: false,
               ),
             ],
           ),

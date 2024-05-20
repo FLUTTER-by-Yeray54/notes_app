@@ -25,55 +25,6 @@ class NoteDetailPage extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-
-        actions: [
-          PopupMenuButton(
-            icon: const Icon(
-              Icons.more_vert, // Icono de desbordamiento de puntos verticales
-              color: Colors.white, // Cambia el color del icono aquí
-            ),
-            onSelected: (val) {
-              if (val == 0) {
-                editNote(i);
-              } else if (val == 1) {
-                deleteNote(context, i);
-              } else if (val == 2) {
-                shareNote(i);
-              }
-            },
-            itemBuilder: (BuildContext bc) {
-              return const [
-                PopupMenuItem(
-                  value: 0,
-                  child: Text(
-                    "Editar Nota",
-                    style: TextStyle(
-                      fontWeight: FontWeight.normal,
-                    ),
-                  ),
-                ),
-                PopupMenuItem(
-                  value: 1,
-                  child: Text(
-                    "Borrar Nota",
-                    style: TextStyle(
-                      fontWeight: FontWeight.normal,
-                    ),
-                  ),
-                ),
-                PopupMenuItem(
-                  value: 2,
-                  child: Text(
-                    "Compartir",
-                    style: TextStyle(
-                      fontWeight: FontWeight.normal,
-                    ),
-                  ),
-                )
-              ];
-            },
-          ),
-        ],
         systemOverlayStyle: SystemUiOverlayStyle.dark,
       ),
       body: GetBuilder<NoteController>(
@@ -126,6 +77,25 @@ class NoteDetailPage extends StatelessWidget {
             ),
           ),
         ),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          Get.toNamed(AppRoute.EDIT_NOTE);
+        },
+        label: const Text(
+          "Editar Nota",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+              fontSize: 16,
+              fontFamily: 'Poppins',
+              fontWeight: FontWeight.w500,
+              color: Colors.white),
+        ),
+        icon: const Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
+        backgroundColor: const Color.fromRGBO(111, 183, 214, 50),
       ),
     );
   }

@@ -119,14 +119,14 @@ class HomePage extends StatelessWidget {
           itemBuilder: (context, index) {
             return GestureDetector(
               onTap: () {
-                Get.toNamed(AppRoute.NOTE_DETAILS, arguments: index);
+                Get.toNamed(AppRoute.EDIT_NOTE, arguments: index);
               },
               onLongPress: () {
                 showDialog(
                   context: context,
                   builder: (context) {
                     return AlertDialogWidget(
-                      headingText: "¿De verdad quieres borrar las notas?",
+                      headingText: "¿Quieres borrar esta nota?",
                       contentText:
                           "Esta accion será permanente y no se podrá deshacer",
                       confirmFunction: () {

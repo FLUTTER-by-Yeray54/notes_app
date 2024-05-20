@@ -16,11 +16,23 @@ class AddNewNotePage extends StatelessWidget {
     controller.contentController.text = "";
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Añadir nueva nota",
-          style: TextStyle(
-            color: Colors.black,
+        title: TextField(
+          controller: controller.titleController,
+          style: const TextStyle(
+            fontSize: 27,
+            fontWeight: FontWeight.bold,
           ),
+          cursorColor: Colors.black,
+          decoration: const InputDecoration(
+            hintText: "Título",
+            hintStyle: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              color: AppColor.hintColor,
+            ),
+            border: InputBorder.none,
+          ),
+          autofocus: true,
         ),
         backgroundColor: Colors.white,
         iconTheme: const IconThemeData(
@@ -36,24 +48,7 @@ class AddNewNotePage extends StatelessWidget {
           ),
           child: Column(
             children: [
-              TextField(
-                controller: controller.titleController,
-                style: const TextStyle(
-                  fontSize: 27,
-                  fontWeight: FontWeight.bold,
-                ),
-                cursorColor: Colors.black,
-                decoration: const InputDecoration(
-                  hintText: "Título",
-                  hintStyle: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: AppColor.hintColor,
-                  ),
-                  border: InputBorder.none,
-                ),
-                autofocus: true,
-              ),
+
               TextField(
                 style: const TextStyle(
                   fontSize: 22,
