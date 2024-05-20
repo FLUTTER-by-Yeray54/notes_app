@@ -1,6 +1,6 @@
 # Notes App
 
-Una App de Notas minimalista que se puede usar tanto en android como ios. Se usa sqlite para el almacenamiento en local.
+Una App de Notas minimalista que se puede usar tanto en android como ios. Se usa una base de datos local (sqlite) para el almacenamiento.
 
 
 ## Sobre la aplicación
@@ -19,8 +19,6 @@ Es una aplicación de notas hecha en flutter. Usa sqlite para el almecenamiento 
 - Crear, Eliminar y Editar Notas
 - Eliminar todas las notas de un solo toque
 - Buscar notas
-- Fecha de creación de la nota
-- Fecha de la ultima edición de la nota
 - Añadir a favoritos la nota
 
 ## Dependencias usadas
