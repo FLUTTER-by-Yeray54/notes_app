@@ -35,7 +35,7 @@ class AlertDialogWidget extends StatelessWidget {
         ),
         TextButton(
           onPressed: confirmFunction,
-          child: const Text("Yes"),
+          child: const Text("Si"),
         ),
       ],
     );
